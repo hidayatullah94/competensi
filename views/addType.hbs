@@ -1,0 +1,23 @@
+{{>head}}
+{{>header}}
+    <div class="container">
+      <h4>Create Type Player</h4>
+      <hr>
+      <form action="" method="post">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name : </label>
+          <input type="text" class="form-control" id="name" name="name" />
+        </div>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div class="result">
+      <div class="list-group">
+        {{#each type}}
+          <a href="/delete/{{this.id}}" class="list-group-item list-group-item-action">{{this.name}}<i class="fas fa-trash"></i> </a>
+        {{/each}}
+      </div>
+    </div>
+{{>footer}}

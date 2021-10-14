@@ -1,0 +1,29 @@
+{{head}}
+{{>header}}
+    <div class="container">
+      <h4>Create Heroes Player</h4>
+      <hr>
+      <form action="" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="photo" class="form-label">Foto : </label>
+          <input type="file" class="form-control" id="photo" name="photo" accept="image/*" />
+        </div>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name : </label>
+          <input type="text" class="form-control" id="name" name="name" />
+        </div>
+        <div class="mb-3">
+          <select name="type" class="form-select" aria-label="Default select example">
+            <option selected>Type :</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+{{>footer}}

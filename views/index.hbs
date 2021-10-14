@@ -1,0 +1,35 @@
+{{>head}}
+{{>header}}
+    <div class="content">
+      <div class="hero">
+        <div class="add">
+          <a href="/addHero" class="btn btn-primary"><i class="fas fa-plus-circle"></i> Add Hero</a>
+          <a href="/addType" class="btn btn-primary"><i class="fas fa-plus-circle"></i> Add Type</a>
+        </div>
+      </div>
+      <div class="list">
+        {{#each hero}}
+          <div class="card" style="width: 14rem; height: 22rem">
+            <img src="/upload/{{this.photo}}" class="card-img-top" alt="img-card" />
+            <div class="action">
+              <a href="{{this.id}}" class="btn btn-edit position-absolute top-0 end-0" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/edit/{{this.id}}" class="dropdown-item"><i class="fas fa-pen"></i> Edit</a>
+                </li>
+                <li>
+                  <a href="/delete/{{this.id}}" class="dropdown-item"><i class="fas fa-trash"></i> Delete</a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <div class="start">
+                <h6 class="card-title">Name : {{this.name}}</h6>
+                <p class="card-text">Type : {{this.type_id}}</p>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+{{>footer}}
